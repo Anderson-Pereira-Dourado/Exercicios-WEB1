@@ -7,29 +7,29 @@
 
 <body>
 
-<form>
+<form action="cadastro.php" method="post" autocomplete="on">
 
 <fieldset>
 <legend>Dados Pessoais</legend>
 
-<label>Nome:</label><br>
-<input type="text" placeholder="Nome completo" required><br><br>
+<label for="nome">Nome:</label><br>
+<input type="text" id="nome" placeholder="Nome completo" required><br><br>
 
-<label>Email:</label><br>
-<input type="email" placeholder="Digite seu email"><br><br>
+<label for="email">Email:</label><br>
+<input type="email" id="email" placeholder="Digite seu email"><br><br>
 
-<label>Telefone:</label><br>
-<input type="tel" placeholder="(XX)XXXXX-XXXX"><br><br>
+<label for="telefone">Telefone (formato (XX)XXXXX-XXXX):</label><br>
+<input type="tel" id="telefone" placeholder="(11)91234-5678"><br><br>
 
-<label>Crie uma senha:</label><br>
-<input type="password" placeholder="Digite sua senha"><br><br>
+<label for="senha">Crie uma senha:</label><br>
+<input type="password" id="senha" placeholder="Digite sua senha"><br><br>
 
-<label>Idade:</label><br>
-<input type="number" placeholder="Sua idade"><br><br>
+<label for="idade">Idade:</label><br>
+<input type="number" id="idade" placeholder="Sua idade"><br><br>
 
-<label>Estado de entrega:</label><br>
+<label for="estado">Estado de entrega:</label><br>
 
-<select>
+<select id="estado">
 <option>Selecione seu estado</option>
 
 <optgroup label="Norte">
@@ -74,77 +74,87 @@
 <option>Rio Grande do Sul</option>
 </optgroup>
 
-</select><br><br>
+</select>
 
-<label>Foto da CNH:</label><br>
-<input type="file">
+<br><br>
+
+<label for="cnh">Foto da CNH:</label><br>
+<input type="file" id="cnh">
 
 </fieldset>
 
+<br>
 
 <fieldset>
 <legend>Escolha do Carro</legend>
 
-<input type="radio" name="carro">
-BYD Seal<br>
+<input type="radio" id="seal" name="carro">
+<label for="seal">BYD Seal</label><br>
 
-<input type="radio" name="carro">
-BYD Han<br>
+<input type="radio" id="han" name="carro">
+<label for="han">BYD Han</label><br>
 
-<input type="radio" name="carro">
-BYD Song Plus<br><br>
+<input type="radio" id="songplus" name="carro">
+<label for="songplus">BYD Song Plus</label><br><br>
 
-Itens adicionais:<br>
+Itens adicionais:<br><br>
 
-<input type="checkbox"> Som Premium<br>
-<input type="checkbox"> Ar-condicionado Digital<br>
-<input type="checkbox"> Câmera 360°<br><br>
+<input type="checkbox" id="som">
+<label for="som">Som Premium</label><br>
 
-Cor:
-<input type="color"><br><br>
+<input type="checkbox" id="ar">
+<label for="ar">Ar-condicionado Digital</label><br>
 
-Intensidade:
-<input type="range">
+<input type="checkbox" id="camera">
+<label for="camera">Câmera 360°</label><br><br>
+
+<label for="cor">Cor:</label>
+<input type="color" id="cor"><br><br>
+
+<label for="intensidade">Intensidade:</label>
+<input type="range" id="intensidade">
 
 </fieldset>
 
+<br>
 
 <fieldset>
 <legend>Entrega</legend>
 
-Data:
-<input type="date"><br><br>
+<label for="data">Data:</label>
+<input type="date" id="data"><br><br>
 
-Hora:
-<input type="time"><br><br>
+<label for="hora">Hora:</label>
+<input type="time" id="hora"><br><br>
 
-Mês:
-<input type="month">
+<label for="mes">Mês:</label>
+<input type="month" id="mes">
 
 </fieldset>
 
+<br>
 
 <fieldset>
 <legend>Sua Opinião</legend>
 
-<textarea rows="5" cols="50"
-placeholder="Digite sua opinião aqui">
-</textarea>
+<label for="opiniao">Comentário:</label><br>
+<textarea id="opiniao" rows="5" cols="50" placeholder="Digite sua opinião aqui"></textarea>
 
 </fieldset>
 
+<br>
 
 <fieldset>
 <legend>Avaliação</legend>
 
-BYD Dolphin Plus:
-<input type="number" min="0" max="5" placeholder="0 a 5"><br><br>
+<label for="dolphin">BYD Dolphin Plus:</label>
+<input type="number" id="dolphin" min="0" max="5" placeholder="0 a 5"><br><br>
 
-BYD GS:
-<input type="number" min="0" max="5" placeholder="0 a 5"><br><br>
+<label for="gs">BYD GS:</label>
+<input type="number" id="gs" min="0" max="5" placeholder="0 a 5"><br><br>
 
-BYD Mini:
-<input type="number" min="0" max="5" placeholder="0 a 5">
+<label for="mini">BYD Mini:</label>
+<input type="number" id="mini" min="0" max="5" placeholder="0 a 5">
 
 </fieldset>
 
