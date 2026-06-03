@@ -13,24 +13,30 @@
 <legend>Dados Pessoais</legend>
 
 <label for="nome">Nome:</label><br>
-<input type="text" id="nome" placeholder="Nome completo" required><br><br>
+<input type="text" id="nome" name="nome" placeholder="Nome completo" required><br><br>
 
 <label for="email">Email:</label><br>
-<input type="email" id="email" placeholder="Digite seu email"><br><br>
+<input type="email" id="email" name="email" placeholder="Digite seu email" required
+       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+       title="Digite um email válido, exemplo: usuario@dominio.com"><br><br>
 
 <label for="telefone">Telefone (formato (XX)XXXXX-XXXX):</label><br>
-<input type="tel" id="telefone" placeholder="(11)91234-5678"><br><br>
+<input type="tel" id="telefone" name="telefone" placeholder="(11)91234-5678" required
+       pattern="\([0-9]{2}\)[0-9]{4,5}-[0-9]{4}"
+       title="Digite um telefone válido no formato (XX)XXXXX-XXXX"><br><br>
 
 <label for="senha">Crie uma senha:</label><br>
-<input type="password" id="senha" placeholder="Digite sua senha"><br><br>
+<input type="password" id="senha" name="senha" placeholder="Digite sua senha" required
+       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+       title="A senha deve ter pelo menos 6 caracteres, incluindo letras maiúsculas, minúsculas e números"><br><br>
 
 <label for="idade">Idade:</label><br>
-<input type="number" id="idade" placeholder="Sua idade"><br><br>
+<input type="number" id="idade" name="idade" placeholder="Sua idade" min="18" max="120" required
+       title="Informe uma idade válida, mínimo 18 anos"><br><br>
 
 <label for="estado">Estado de entrega:</label><br>
-
-<select id="estado">
-<option>Selecione seu estado</option>
+<select id="estado" name="estado" required>
+<option value="">Selecione seu estado</option>
 
 <optgroup label="Norte">
 <option>Acre</option>
@@ -74,12 +80,10 @@
 <option>Rio Grande do Sul</option>
 </optgroup>
 
-</select>
-
-<br><br>
+</select><br><br>
 
 <label for="cnh">Foto da CNH:</label><br>
-<input type="file" id="cnh">
+<input type="file" id="cnh" name="cnh" accept="image/*" required>
 
 </fieldset>
 
@@ -88,31 +92,31 @@
 <fieldset>
 <legend>Escolha do Carro</legend>
 
-<input type="radio" id="seal" name="carro">
+<input type="radio" id="seal" name="carro" value="Seal" required>
 <label for="seal">BYD Seal</label><br>
 
-<input type="radio" id="han" name="carro">
+<input type="radio" id="han" name="carro" value="Han">
 <label for="han">BYD Han</label><br>
 
-<input type="radio" id="songplus" name="carro">
+<input type="radio" id="songplus" name="carro" value="Song Plus">
 <label for="songplus">BYD Song Plus</label><br><br>
 
 Itens adicionais:<br><br>
 
-<input type="checkbox" id="som">
+<input type="checkbox" id="som" name="itens[]" value="Som Premium">
 <label for="som">Som Premium</label><br>
 
-<input type="checkbox" id="ar">
+<input type="checkbox" id="ar" name="itens[]" value="Ar-condicionado Digital">
 <label for="ar">Ar-condicionado Digital</label><br>
 
-<input type="checkbox" id="camera">
+<input type="checkbox" id="camera" name="itens[]" value="Câmera 360°">
 <label for="camera">Câmera 360°</label><br><br>
 
 <label for="cor">Cor:</label>
-<input type="color" id="cor"><br><br>
+<input type="color" id="cor" name="cor" required><br><br>
 
 <label for="intensidade">Intensidade:</label>
-<input type="range" id="intensidade">
+<input type="range" id="intensidade" name="intensidade" min="0" max="100" value="50">
 
 </fieldset>
 
@@ -122,13 +126,13 @@ Itens adicionais:<br><br>
 <legend>Entrega</legend>
 
 <label for="data">Data:</label>
-<input type="date" id="data"><br><br>
+<input type="date" id="data" name="data" required><br><br>
 
 <label for="hora">Hora:</label>
-<input type="time" id="hora"><br><br>
+<input type="time" id="hora" name="hora" required><br><br>
 
 <label for="mes">Mês:</label>
-<input type="month" id="mes">
+<input type="month" id="mes" name="mes" required>
 
 </fieldset>
 
@@ -138,8 +142,7 @@ Itens adicionais:<br><br>
 <legend>Sua Opinião</legend>
 
 <label for="opiniao">Comentário:</label><br>
-<textarea id="opiniao" rows="5" cols="50" placeholder="Exemplo: Espero que o сarro tenha uma boa autonomia, seja confortavel, silencioso e impressione os vizinhos!
-"></textarea>
+<textarea id="opiniao" name="opiniao" rows="5" cols="50" placeholder="Exemplo: Espero que o carro tenha uma boa autonomia, seja confortável, silencioso e impressione os vizinhos!" required></textarea>
 
 </fieldset>
 
@@ -149,13 +152,13 @@ Itens adicionais:<br><br>
 <legend>Avaliação</legend>
 
 <label for="dolphin">BYD Dolphin Plus:</label>
-<input type="number" id="dolphin" min="0" max="5" placeholder="0 a 5"><br><br>
+<input type="number" id="dolphin" name="dolphin" min="0" max="5" placeholder="0 a 5" required><br><br>
 
 <label for="gs">BYD GS:</label>
-<input type="number" id="gs" min="0" max="5" placeholder="0 a 5"><br><br>
+<input type="number" id="gs" name="gs" min="0" max="5" placeholder="0 a 5" required><br><br>
 
 <label for="mini">BYD Mini:</label>
-<input type="number" id="mini" min="0" max="5" placeholder="0 a 5">
+<input type="number" id="mini" name="mini" min="0" max="5" placeholder="0 a 5" required>
 
 </fieldset>
 
